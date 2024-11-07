@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: titulo;
+    src: url(fontes/bubblegum-sans-regular.otf);
+    font-weight: normal;
+}
+
+/*Reset CSS*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/*Variáveis*/
+:root{
+    --cor1: #c5ebd6;
+    --cor2: #83e1ad;
+    --cor3: #3ddc84;
+    --cor4: #2fa866;
+    --cor5: #1a5c37;
+    --cor6: #FFF;
+    --cor7: #000;
+
+    --fonte-titulo: 'titulo';
+}
+body {
+    background: var(--cor1);
+}
+
+#interface{
+    background: var(--cor6);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.topo{
+    height: 70px;
+}
+
+.logo img{
+    margin: 10px 20px;
+    position: relative;
+}
+
+.menu{
+    display: block;
+    position: absolute;
+    width: 400px;
+    left: 900px;
+    top: 15px;
+}
+
+.menu ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu li{
+    float: left;
+}
+
+.menu li a{
+    text-decoration: none;
+    padding: 10px 25px;
+    color: var(--cor1);
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+}
+
+.menu li a:hover{
+    text-decoration: underline;
+    color: #2fa866;
+
+}.banner_anime{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 350px;
+    margin: 0;
+}
+
+#anime1, #anime2{
+    max-width: 1200px;
+    height: auto;
+}
+
+.banner_anime img{
+    position: absolute;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: linear; /*ease, linear, ease-in, ease-out, aliviar-in-out, cubico-bezier (são os que aceitam na função transicão*/
+
+}
+
+#anime1 , #anime2:hover{
+    opacity: 1;
+}
+#anime1:hover, #anime2{
+    opacity: 0;
+}
+
+h1{
+    font-family: titulo;
+    font-size: 2em;
+    margin: 30px 0px; /* magin é para aumentar e diminuir a caixa barra fundo dentro da letra*/
+    background: #3ddc84; 
+    padding: 10px 0px; /* padding é o contrario da margin, a caixa de texto alarga*/
+    text-align: center;
+    color: var(--cor5)
+}
+
+form{
+    width: 1000px;
+    font-size: 1.2em;
+    font-family: 'Lucida Sans', 'Sans serif';
+    margin: 0 auto;
+}
+
+input, textarea, select{
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.9em;
+}
+
+legend{
+    font-family: var(--fonte-titulo);
+    color: var(--cor4);
+    font-size: 1.5em;
+}
+
+fieldset{
+    border: 1px solid var(--cor5);
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.sexo{
+    width: 250px;
+
+}
+
+#contato p{
+    padding: 5px;
+}
+
+.usuario{
+    background: url(img/icontato.png) no-repeat 95% 95%; 
+}
+
+.endereco{
+    background: url(img/iendereco.png) no-repeat 95% 95%;
+
+}
+
+.mensagem{
+    background: url(img/imensagem.png) no-repeat 95% 95%;
+}
+
+.pedido{
+    background: url(img/ipgto.png) no-repeat 95% 95%;
+}
+
+.btn{
+    background: var(--cor5);
+    color: var(--cor1);
+    font-size: 1.1em;
+    padding: 7px;
+    border-radius: 10px;
+    margin: 0px 5px 15px 5px;
+}
+
+#rodape{
+    border-top: 2px solid var(--cor5);
+    text-align: center;
+
+}
+
+#rodape p{
+    margin-top: 10px 0px;
+    font-size: 1.2em;
+    font-family: var(--fonte-titulo);
+}
+
+rodape a{
+    text-decoration: none;
+}
