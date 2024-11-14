@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+/*Fontes externas*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/*Váriaveis CSS*/
+:root {
+    --cor1: #e8e8e8;
+    /*fontes*/
+    --cor2: #a1a1a1;
+    /*cartão*/
+    --cor3: #434343;
+    /*menu / rodapé / cartão*/
+    --cor4: #173261;
+    /*botão*/
+    --cor5: #FFF;
+    --cor6: #000;
+
+    --titulo: 'Patua', sans-serif;
+    /*sans-serif é quando você escolhe a fonte, digita e não reconhece ele usa o próprio sans-serif*/
+    --texto: 'Lobster', sans-serif;
+}
+
+/*Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;               /* Preenchimento*/
+    box-sizing: border-box;   /* caso não mostre box-sizing, pode mostrar (border) e ele é a mesma coisa da outra*/
+}
+
+body {   /*Corpo do projeto*/
+    background: #939292
+}
+/*layout*/
+.container{
+    display: flex;
+}
+
+/*SMARTPHONE PORTRAIT (PORTATIL)*/
+
+/*SMARTPHONE LANDSCAPE (CELULAR TELA DEITADO)*/
+
+@media (min-width:576px) {           /*Configuração da largura celular*/
+    body {
+        background: #edaaf8;       /*Cor da tela celular deitado*/
+    }
+
+}
+/*TABLET PORTATIL (TABLET TELA DEITADA*/
+
+@media (min-width:768px){            /*Configuração da largura tablet*/
+    body{
+        background: #7fff7f;      /*Cor da tela tablet em pé*/
+    } 
+}
+
+/*TABLET LANDSCAPE*/
+@media (min-width:992px){
+    body{
+        background: #7fff7f;
+    }
+}
+
+/*PC*/
+@media (min-width: 1200px){
+    body{
+        background: #0de9e9
+    };
+}
