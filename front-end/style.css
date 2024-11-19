@@ -34,10 +34,58 @@ body {   /*Corpo do projeto*/
 }
 /*layout*/
 .container{
-    display: flex;
+    margin: 0 auto;
+    background: #cecece;
 }
 
+#topo{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    background: #aaf8b3;
+}
 /*SMARTPHONE PORTRAIT (PORTATIL)*/
+header{         /*Cabeçalho*/
+height: 60px;
+}
+#check{
+    display: none;  /*Essa função serve para esconder algo*/
+}
+label{
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+
+}
+nav ul{
+    list-style: none;  /*Esconde a bolinha*/
+    background: var(--cor3);
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+nav ul li{
+    padding: 20px;
+    border-bottom: var(--cor2) 1px solid;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--cor1);
+    font-family: var(--texto);
+    font-size: 1.3em;
+}
+#check:checked ~ ul{
+    right: 0;
+}
 
 /*SMARTPHONE LANDSCAPE (CELULAR TELA DEITADO)*/
 
@@ -45,14 +93,20 @@ body {   /*Corpo do projeto*/
     body {
         background: #edaaf8;       /*Cor da tela celular deitado*/
     }
+    .container{
+        max-width: 540px;
+    }
 
 }
-/*TABLET PORTATIL (TABLET TELA DEITADA*/
+/*TABLET PORTRAIT (TABLET TELA DEITADA)*/
 
 @media (min-width:768px){            /*Configuração da largura tablet*/
     body{
         background: #7fff7f;      /*Cor da tela tablet em pé*/
     } 
+    .container{
+        max-width: 720px;
+    }
 }
 
 /*TABLET LANDSCAPE*/
@@ -60,11 +114,26 @@ body {   /*Corpo do projeto*/
     body{
         background: #7fff7f;
     }
+    .container{
+        max-width: 960px;
+    }
 }
 
 /*PC*/
 @media (min-width: 1200px){
     body{
         background: #0de9e9
-    };
+    }
+    .container{
+        max-width: 1140px;
+    }
+
+    header{   /*Cabeçalho*/
+        height: 125px;     
+    }
+    .logo img{
+        margin-top: 30px;
+        margin-left: 30px;
+    }        
+
 }
